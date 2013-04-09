@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+	<h1>You are logged in!</h1>
+<% else %>
 <div class="center hero-unit">
 
   <h1>Find a Job!</h1>
@@ -5,6 +8,7 @@
     <p>This is a job application tracker</p>
 
     <p>
-      <%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
+      <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
     </p>
-</div>
+	</div>
+<% end %>
